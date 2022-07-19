@@ -6,6 +6,6 @@ buildscript {
 }
 
 dependencies {
-        implementation files('src/main/libs/play-services-tapandpay-17.0.1.aar')
+        implementation files('src/main/libs/play-services-tapandpay-18.2.0.aar')
 }
 

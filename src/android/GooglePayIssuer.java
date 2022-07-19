@@ -30,8 +30,7 @@ import com.google.android.gms.tasks.Task;
 
 import java.nio.charset.Charset;
 
-import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
+import android.support.annotation.NonNull;
 
 public class GooglePayIssuer extends CordovaPlugin {
 
@@ -206,7 +205,6 @@ Log.i(TAG, "PUSHPROVISION --- 3" );
                                         // If no Google Pay wallet is found, create one and then call
                                         // getActiveWalletId() again.
                                         createWallet();
-                                        getActiveWalletID(callbackContext);
                                     } else {
                                         //Failed to get active wallet ID
                                         callbackContext.error("error");
@@ -375,9 +373,7 @@ Log.i(TAG, "PUSHPROVISION --- 3" );
                 return;
             } else if (resultCode == cordova.getActivity().RESULT_OK) {
                 // The action succeeded.
-                PluginResult resultado = new PluginResult(PluginResult.Status.OK);
-                resultado.setKeepCallback(true);
-                callbackContext.sendPluginResult(resultado);
+                getActiveWalletID(callbackContext);
                 return;
             }
         }

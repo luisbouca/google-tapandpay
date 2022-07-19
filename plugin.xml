@@ -14,14 +14,10 @@
         <clobbers target="GooglePayIssuer" />
     </js-module>
 
-    <dependency id="cordova-androidx-build" 
-                    url="https://github.com/cmfsotelo/cordova-androidx-build.git#1.0-OS.1" />
-
     <platform name="android">
-        <resource-file src="src/android/lib/play-services-tapandpay-17.0.1.aar" target="libs/play-services-tapandpay-17.0.1.aar" />
-        <!--
-        <resource-file src="src/android/lib/play-services-tapandpay-17.0.1.aar" target-dir="libs/play-services-tapandpay-17.0.1.aar" />
-        -->
+
+        <resource-file src="src/android/lib/play-services-tapandpay-18.2.0.aar" target="libs/play-services-tapandpay-18.2.0.aar" />
+
         <framework src="com.google.android.gms:play-services-oss-licenses:17.0.0" />
     
         <config-file target="config.xml" parent="/*">
